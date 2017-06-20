@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My first CLI Data Scraping App"
-date:   2017-06-13 21:33:37 +0000
+date:   2017-06-13 17:33:38 -0400
 ---
 
 
@@ -13,5 +13,5 @@ The reason why it was way easier to debug having prewritten tests was not only b
 
 By now for this purpose I used pen and paper to think of collaborations between several classes, their quantity, where it was necessary to create actual instances, and where not etc. As far as in Ruby there are pretty much only variables and methods, in other words, data and functionality, I decided to initiate instances in a class, which was responsible for storing information, while classes, which were built in order to add actions to the app (ie, retrieving data, interacting with user) did not need to have instances. In this project this approach helped me to find a solution for this dilemma. Please, feel free to check my github and dive into details.
 
-https://github.com/laramontana/best-dogs-for-apartments-cli-data-project
+[https://github.com/laramontana/best-dogs-for-apartments-cli-data-project](http://github.com/laramontana/best-dogs-for-apartments-cli-data-project)
 
