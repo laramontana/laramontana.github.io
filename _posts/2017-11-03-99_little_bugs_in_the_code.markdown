@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "99 little bugs in the code"
-date:       2017-11-03 20:15:37 +0000
+date:       2017-11-03 16:15:38 -0400
 permalink:  99_little_bugs_in_the_code
 ---
 
