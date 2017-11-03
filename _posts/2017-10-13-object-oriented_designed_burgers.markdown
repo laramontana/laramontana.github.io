@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Object-oriented designed burgers "
-date:       2017-10-13 10:22:02 +0000
+date:       2017-10-13 06:22:03 -0400
 permalink:  object-oriented_designed_burgers
 ---
 
 
-Once me and my boyfriend Ryan were watching the episode of [«Halt and catch fire»](http://www.imdb.com/title/tt2543312/) where Tom suggests Cameron to update their game and build it using object oriented programming (OOP). As the CEO Cameron tells him it is a bad idea, because they would waste a lot of time and money on doing so. They have a huge fight, but do not really talk about particular benefits or disadvantages of OO approach comparing to the paradigm they are using. And then Ryan asked me “What does OOP mean?  How is it different and beneficial?” At that moment, I guess, I felt like all dogs do – when they understand what they hear and know the answer, but do not know how to put it in words. 
+Once me and my friend were watching the episode of [«Halt and catch fire»](http://www.imdb.com/title/tt2543312/) where Tom suggests Cameron to update their game and build it using object oriented programming (OOP). As the CEO Cameron tells him it is a bad idea, because they would waste a lot of time and money on doing so. They have a huge fight, but do not really talk about particular benefits or disadvantages of OO approach comparing to the paradigm they are using. And then my friend asked me “What does OOP mean?  How is it different and beneficial?” At that moment, I guess, I felt like all dogs do – when they understand what they hear and know the answer, but do not know how to put it in words. 
 
 By that time I have almost completed Sinatra section of Full Stack Web Development Curriculum at Flatiron School, but had to temporarily pause my studies. So I thought it was a good timing to catch up on learning programing with books and to strengthen theoretical knowledge to be able to talk about certain concepts. After asking myself questions about things I think I know, I realized that the tricky part about explaining OOP is that we ourselves are actually objects and we are surrounded by another objects. This fact is so obvious that it did not come into my head in the first place. 
 
