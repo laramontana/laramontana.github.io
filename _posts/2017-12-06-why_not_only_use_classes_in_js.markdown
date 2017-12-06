@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Why not only use classes in JS?"
-date:       2017-12-06 17:55:06 +0000
+date:       2017-12-06 12:55:07 -0500
 permalink:  why_not_only_use_classes_in_js
 ---
 
@@ -45,7 +45,7 @@ lilly.sayHello();
 ```
 In the code above, when we call `new` it creates a new empty object, on which the constructor function `Robot()` gets called, which fills in that empty object with an attribute of `name` and makes it equal to a value of a passed argument, as `this` refers to a just created object. Finally, we assign the `sayHello()` function to a whole prototype of `Robot`, so any object created via `new Robot()` has access to this function. This way regardless of the number of objects produced from the `Robot` constructor, there will be only one declared `sayHello()`  function.
 
-Let’s now have a look how we can wrap it into a ES6 class:
+Let us now have a look how we can wrap it into a ES6 class:
 ```
 class Robot {
   constructor(name) {
@@ -65,4 +65,4 @@ typeof Robot
 // function
 ```
 
-Which means that if we call `new Robot()` now the exact same process will start, which was described earlier for prototype. This is important to keep in mind while working with classes, to stay confident and in control of what is happening behind the scenes, as well as to understand some limitations and scope-wise pitfalls of class pattern.  
+Which means that now if we call `new Robot()` the exact same process, which was described earlier for prototype, will start. This is important to keep in mind while working with classes, to stay confident and in control of what is happening behind the scenes, as well as to understand some limitations and scope-wise pitfalls of class pattern.  
