@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Why not only use classes in JS?"
+title:      "Why not only use classes in JavaScript?"
 date:       2017-12-06 12:55:07 -0500
 permalink:  why_not_only_use_classes_in_js
 ---
