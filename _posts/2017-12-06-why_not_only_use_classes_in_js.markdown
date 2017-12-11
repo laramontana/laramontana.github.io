@@ -34,7 +34,7 @@ function Robot(name) {
   this.name = name;
 }
 ```
-This way `sayHello()` is not assigned to any particular `Robot`  object, in other words `sayHello()`  is no longer be a `Robot`  object’s property. Instead we are going to declare `sayHello()`  to `Robot.prototype`, so this way all `Robot` objects will have access to it. Although it does not belong to them directly,  this function can still be used  by all `Robot`  objects equally. Such functions are called methods of object instances. In order to give each constructed `Robot` object instance access to `sayHello()` method, we assign it as a `Robot` **prototype property**. It means that `Robot.prototype`  represents functionality that `Robot`  objects can use unless they have anything else declared in the constructor. 
+This way `sayHello()` is not assigned to any particular `Robot`  object, in other words `sayHello()`  is no longer a `Robot`  object’s property. Instead we are going to declare `sayHello()`  to `Robot.prototype`, so this way all `Robot` objects will have access to it. Although it does not belong to them directly,  this function can still be used  by all `Robot`  objects equally. Such functions are called methods of object instances. In order to give each constructed `Robot` object instance access to `sayHello()` method, we assign it as a `Robot` **prototype property**. It means that `Robot.prototype`  represents functionality that `Robot`  objects can use unless they have anything else declared in the constructor. 
 
 ```
 Robot.prototype.sayHello = function() {
@@ -47,7 +47,7 @@ lilly.sayHello();
 ```
 In the code above, when we call `new` it creates a new empty object, on which the constructor function `Robot()` gets called, which fills in that empty object with an attribute of `name` and makes it equal to a value of a passed argument, as `this` refers to a just created object. Finally, we assign the `sayHello()` function to a whole prototype of `Robot`, so any object created via `new Robot()` has access to this function. This way regardless of the number of objects produced from the `Robot` constructor, there will be only one declared `sayHello()`  function.
 
-Moreover, it is possible to call one prototype function inside the other. You can do this by referring to an object instance as `this` as it represents the context on which the method was invoked.
+Moreover, it is possible to call one prototype function inside the other. You can do this by referring to an object instance as `this` since it represents the context on which the method was invoked.
 
 ```
 function Robot(name) {
