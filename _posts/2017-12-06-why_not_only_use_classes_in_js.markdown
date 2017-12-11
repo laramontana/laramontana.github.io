@@ -26,14 +26,16 @@ lilly.sayHello();
 // "Hello humans, my name is Lilly!"
 ```
 
-Although the output is the same (except for the certain name), it does not mean that for each of new object the same function `sayHello()` is invoked. Every time a new object is created, our constructor function is run, which declares a new function as a property of the new object. To fix that we can move the declaration of the `sayHello()` function to outside of the constructor `Robot()` function. This prevents the `sayHello()` function from being redeclared each time a new `Robot` is created. 
+Although the output is the same (except for the certain name), it does not mean that for each of new object the same function `sayHello()` is invoked. Every time a new object is created, our constructor function is run, which declares a new function as a property of the new object. To fix that we can move the declaration of the `sayHello()` function to outside of the constructor `Robot()` function. This prevents the `sayHello()` function from being redeclared each time a new `Robot` is created. 
+
 
 ```
 function Robot(name) {
   this.name = name;
 }
 ```
-In order to give each constructed `Robot` object access to `sayHello()` function, we assign this function as a `Robot` **prototype property**. 
+This way `sayHello()` is not assigned to any particular `Robot`  object, in other words `sayHello()`  is no longer be a `Robot`  object’s property. Instead we are going to declare `sayHello()`  to `Robot.prototype`, so this way all `Robot` objects will have access to it. Although it does not belong to them directly,  this function can still be used  by all `Robot`  objects equally. Such functions are called methods of object instances. In order to give each constructed `Robot` object instance access to `sayHello()` method, we assign it as a `Robot` **prototype property**. It means that `Robot.prototype`  represents functionality that `Robot`  objects can use unless they have anything else declared in the constructor. 
+
 ```
 Robot.prototype.sayHello = function() {
   console.log(`Hello humans, my name is ${this.name}`);
@@ -45,6 +47,29 @@ lilly.sayHello();
 ```
 In the code above, when we call `new` it creates a new empty object, on which the constructor function `Robot()` gets called, which fills in that empty object with an attribute of `name` and makes it equal to a value of a passed argument, as `this` refers to a just created object. Finally, we assign the `sayHello()` function to a whole prototype of `Robot`, so any object created via `new Robot()` has access to this function. This way regardless of the number of objects produced from the `Robot` constructor, there will be only one declared `sayHello()`  function.
 
+Moreover, it is possible to call one prototype function inside the other. You can do this by referring to an object instance as `this` as it represents the context on which the method was invoked.
+
+```
+function Robot(name) {
+  this.name = name;
+}
+Robot.prototype.sayHello = function() {
+  console.log(`Hello humans, my name is ${this.name}.`);
+};
+Robot.prototype.askName = function() {
+  console.log(`What is your name?`);
+};
+Robot.prototype.haveConversation = function() {
+  this.sayHello();
+  this.askName();
+};
+let lilly = new Robot('Lilly');
+lilly.haveConversation();
+// Hello humans, my name is Lilly. 
+// What is your name?
+```
+
+
 Let us now have a look how we can wrap it into a ES6 class:
 ```
 class Robot {
@@ -55,6 +80,13 @@ class Robot {
   sayHello() {
     console.log(`Hello humans, my name is ${this.name}`);
   }
+	askName() {
+  console.log(`What is your name?`);
+};
+haveConversation() {
+  this.sayHello();
+  this.askName();
+};
 }
 ```
 
