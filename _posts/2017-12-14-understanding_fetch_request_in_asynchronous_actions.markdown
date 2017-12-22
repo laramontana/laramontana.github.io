@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Understanding fetch request in asynchronous actions "
-date:       2017-12-14 22:54:00 +0000
+date:       2017-12-14 17:54:01 -0500
 permalink:  understanding_fetch_request_in_asynchronous_actions
 ---
 
@@ -33,5 +33,5 @@ fetch('http://www.jservice.io/api/categories?count=48')
 )}
 ```
 
- 
+[Trivia app](https://github.com/laramontana/react-trivia-app-with-rails-backend) 
 
