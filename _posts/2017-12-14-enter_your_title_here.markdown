@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Enter your title here"
-date:       2017-12-14 23:45:27 +0000
+title:      "React: props or state? "
+date:       2017-12-14 18:45:28 -0500
 permalink:  enter_your_title_here
 ---
 
